@@ -1,1 +1,3 @@
-file content
+ng build --prod --base-href "https://Charcantus.github.io/charcantusite/"
+
+npx angular-cli-ghpages --dir=dist/charcantusite
