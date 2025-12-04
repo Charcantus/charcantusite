@@ -9,21 +9,21 @@ export class ErbaComponent implements OnInit {
   constructor() { }
 
   pokemonErba: {name:string, image:string}[] = [
-    {name: 'Bulbasaur', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/bulbasaur.png'},
-    {name: 'Oddish', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/oddish.png'},
-    {name: 'Bellsprout', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/bellsprout.png'},
-    {name: 'Exeggcute', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/exeggcute.png'},
-    {name: 'Tangela', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/tangela.png'},
-    {name: 'Chikorita', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/chikorita.png'},
-    {name: 'Treecko', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/treecko.png'},
-    {name: 'Turtwig', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/turtwig.png'},
-    {name: 'Snivy', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/snivy.png'},
-    {name: 'Chespin', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/chespin.png'},
-    {name: 'Rowlet', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/rowlet.png'},
-    {name: 'Grookey', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/grookey.png'},
-    {name: 'Sprigatito', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/sprigatito.png'},
-    {name: 'Leafeon', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/leafeon.png'},
-    {name: 'Sceptile', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/sceptile.png'},
+    {name: 'Bulbasaur', image: 'https://img.pokemondb.net/sprites/home/normal/bulbasaur.png'},
+    {name: 'Oddish', image: 'https://img.pokemondb.net/sprites/home/normal/oddish.png'},
+    {name: 'Bellsprout', image: 'https://img.pokemondb.net/sprites/home/normal/bellsprout.png'},
+    {name: 'Exeggcute', image: 'https://img.pokemondb.net/sprites/home/normal/exeggcute.png'},
+    {name: 'Tangela', image: 'https://img.pokemondb.net/sprites/home/normal/tangela.png'},
+    {name: 'Chikorita', image: 'https://img.pokemondb.net/sprites/home/normal/chikorita.png'},
+    {name: 'Treecko', image: 'https://img.pokemondb.net/sprites/home/normal/treecko.png'},
+    {name: 'Turtwig', image: 'https://img.pokemondb.net/sprites/home/normal/turtwig.png'},
+    {name: 'Snivy', image: 'https://img.pokemondb.net/sprites/home/normal/snivy.png'},
+    {name: 'Chespin', image: 'https://img.pokemondb.net/sprites/home/normal/chespin.png'},
+    {name: 'Rowlet', image: 'https://img.pokemondb.net/sprites/home/normal/rowlet.png'},
+    {name: 'Grookey', image: 'https://img.pokemondb.net/sprites/home/normal/grookey.png'},
+    {name: 'Sprigatito', image: 'https://img.pokemondb.net/sprites/home/normal/sprigatito.png'},
+    {name: 'Leafeon', image: 'https://img.pokemondb.net/sprites/home/normal/leafeon.png'},
+    {name: 'Sceptile', image: 'https://img.pokemondb.net/sprites/home/normal/sceptile.png'},
   ]
   squadraErba: {name:string; image:string} = {name: '', image: ''};
 

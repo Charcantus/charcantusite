@@ -9,21 +9,21 @@ export class RocciaComponent implements OnInit {
   constructor() { }
 
   pokemonRoccia: {name:string, image:string}[] = [
-    {name: 'Golem', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/golem.png'},
-    {name: 'Onix', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/onix.png'},
-    {name: 'Rhyhorn', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/rhyhorn.png'},
-    {name: 'Geodude', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/geodude.png'},
-    {name: 'Sudowoodo', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/sudowoodo.png'},
-    {name: 'Larvitar', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/larvitar.png'},
-    {name: 'Tyranitar', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/tyranitar.png'},
-    {name: 'Nosepass', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/nosepass.png'},
-    {name: 'Cranidos', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/cranidos.png'},
-    {name: 'Shieldon', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/shieldon.png'},
-    {name: 'Boldore', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/boldore.png'},
-    {name: 'Gigalith', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/gigalith.png'},
-    {name: 'Roggenrola', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/roggenrola.png'},
-    {name: 'Carracosta', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/carracosta.png'},
-    {name: 'Tirtouga', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/tirtouga.png'},
+    {name: 'Golem', image: 'https://img.pokemondb.net/sprites/home/normal/golem.png'},
+    {name: 'Onix', image: 'https://img.pokemondb.net/sprites/home/normal/onix.png'},
+    {name: 'Rhyhorn', image: 'https://img.pokemondb.net/sprites/home/normal/rhyhorn.png'},
+    {name: 'Geodude', image: 'https://img.pokemondb.net/sprites/home/normal/geodude.png'},
+    {name: 'Sudowoodo', image: 'https://img.pokemondb.net/sprites/home/normal/sudowoodo.png'},
+    {name: 'Larvitar', image: 'https://img.pokemondb.net/sprites/home/normal/larvitar.png'},
+    {name: 'Tyranitar', image: 'https://img.pokemondb.net/sprites/home/normal/tyranitar.png'},
+    {name: 'Nosepass', image: 'https://img.pokemondb.net/sprites/home/normal/nosepass.png'},
+    {name: 'Cranidos', image: 'https://img.pokemondb.net/sprites/home/normal/cranidos.png'},
+    {name: 'Shieldon', image: 'https://img.pokemondb.net/sprites/home/normal/shieldon.png'},
+    {name: 'Boldore', image: 'https://img.pokemondb.net/sprites/home/normal/boldore.png'},
+    {name: 'Gigalith', image: 'https://img.pokemondb.net/sprites/home/normal/gigalith.png'},
+    {name: 'Roggenrola', image: 'https://img.pokemondb.net/sprites/home/normal/roggenrola.png'},
+    {name: 'Carracosta', image: 'https://img.pokemondb.net/sprites/home/normal/carracosta.png'},
+    {name: 'Tirtouga', image: 'https://img.pokemondb.net/sprites/home/normal/tirtouga.png'},
   ]
   squadraRoccia: {name:string; image:string} = {name: '', image: ''};
 

@@ -9,21 +9,21 @@ export class GhiaccioComponent implements OnInit {
   constructor() { }
 
   pokemonGhiaccio: {name:string, image:string}[] = [
-    {name: 'Articuno', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/articuno.png'},
-    {name: 'Jynx', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/jynx.png'},
-    {name: 'Lapras', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/lapras.png'},
-    {name: 'Glaceon', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/glaceon.png'},
-    {name: 'Sneasel', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/sneasel.png'},
-    {name: 'Weavile', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/weavile.png'},
-    {name: 'Snorunt', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/snorunt.png'},
-    {name: 'Froslass', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/froslass.png'},
-    {name: 'Spheal', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/spheal.png'},
-    {name: 'Sealeo', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/sealeo.png'},
-    {name: 'Walrein', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/walrein.png'},
-    {name: 'Cubchoo', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/cubchoo.png'},
-    {name: 'Beartic', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/beartic.png'},
-    {name: 'Cryogonal', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/cryogonal.png'},
-    {name: 'Regice', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/regice.png'},
+    {name: 'Articuno', image: 'https://img.pokemondb.net/sprites/home/normal/articuno.png'},
+    {name: 'Jynx', image: 'https://img.pokemondb.net/sprites/home/normal/jynx.png'},
+    {name: 'Lapras', image: 'https://img.pokemondb.net/sprites/home/normal/lapras.png'},
+    {name: 'Glaceon', image: 'https://img.pokemondb.net/sprites/home/normal/glaceon.png'},
+    {name: 'Sneasel', image: 'https://img.pokemondb.net/sprites/home/normal/sneasel.png'},
+    {name: 'Weavile', image: 'https://img.pokemondb.net/sprites/home/normal/weavile.png'},
+    {name: 'Snorunt', image: 'https://img.pokemondb.net/sprites/home/normal/snorunt.png'},
+    {name: 'Froslass', image: 'https://img.pokemondb.net/sprites/home/normal/froslass.png'},
+    {name: 'Spheal', image: 'https://img.pokemondb.net/sprites/home/normal/spheal.png'},
+    {name: 'Sealeo', image: 'https://img.pokemondb.net/sprites/home/normal/sealeo.png'},
+    {name: 'Walrein', image: 'https://img.pokemondb.net/sprites/home/normal/walrein.png'},
+    {name: 'Cubchoo', image: 'https://img.pokemondb.net/sprites/home/normal/cubchoo.png'},
+    {name: 'Beartic', image: 'https://img.pokemondb.net/sprites/home/normal/beartic.png'},
+    {name: 'Cryogonal', image: 'https://img.pokemondb.net/sprites/home/normal/cryogonal.png'},
+    {name: 'Regice', image: 'https://img.pokemondb.net/sprites/home/normal/regice.png'},
   ]
   squadraGhiaccio: {name:string; image:string} = {name: '', image: ''};
 

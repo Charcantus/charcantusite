@@ -9,21 +9,21 @@ export class ColeotteroComponent implements OnInit {
   constructor() { }
 
   pokemonColeottero: {name:string, image:string}[] = [
-    {name: 'Scyther', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/scyther.png'},
-    {name: 'Heracross', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/heracross.png'},
-    {name: 'Pinsir', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/pinsir.png'},
-    {name: 'Volbeat', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/volbeat.png'},
-    {name: 'Illumise', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/illumise.png'},
-    {name: 'Wurmple', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/wurmple.png'},
-    {name: 'Beautifly', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/beautifly.png'},
-    {name: 'Dustox', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/dustox.png'},
-    {name: 'Surskit', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/surskit.png'},
-    {name: 'Masquerain', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/masquerain.png'},
-    {name: 'Nincada', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/nincada.png'},
-    {name: 'Ninjask', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/ninjask.png'},
-    {name: 'Shedinja', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/shedinja.png'},
-    {name: 'Volcarona', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/volcarona.png'},
-    {name: 'Genesect', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/genesect.png'},
+    {name: 'Scyther', image: 'https://img.pokemondb.net/sprites/home/normal/scyther.png'},
+    {name: 'Heracross', image: 'https://img.pokemondb.net/sprites/home/normal/heracross.png'},
+    {name: 'Pinsir', image: 'https://img.pokemondb.net/sprites/home/normal/pinsir.png'},
+    {name: 'Volbeat', image: 'https://img.pokemondb.net/sprites/home/normal/volbeat.png'},
+    {name: 'Illumise', image: 'https://img.pokemondb.net/sprites/home/normal/illumise.png'},
+    {name: 'Wurmple', image: 'https://img.pokemondb.net/sprites/home/normal/wurmple.png'},
+    {name: 'Beautifly', image: 'https://img.pokemondb.net/sprites/home/normal/beautifly.png'},
+    {name: 'Dustox', image: 'https://img.pokemondb.net/sprites/home/normal/dustox.png'},
+    {name: 'Surskit', image: 'https://img.pokemondb.net/sprites/home/normal/surskit.png'},
+    {name: 'Masquerain', image: 'https://img.pokemondb.net/sprites/home/normal/masquerain.png'},
+    {name: 'Nincada', image: 'https://img.pokemondb.net/sprites/home/normal/nincada.png'},
+    {name: 'Ninjask', image: 'https://img.pokemondb.net/sprites/home/normal/ninjask.png'},
+    {name: 'Shedinja', image: 'https://img.pokemondb.net/sprites/home/normal/shedinja.png'},
+    {name: 'Volcarona', image: 'https://img.pokemondb.net/sprites/home/normal/volcarona.png'},
+    {name: 'Genesect', image: 'https://img.pokemondb.net/sprites/home/normal/genesect.png'},
   ]
   squadraColeottero: {name:string; image:string} = {name: '', image: ''};
 

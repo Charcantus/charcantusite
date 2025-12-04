@@ -9,21 +9,21 @@ export class LottaComponent implements OnInit {
   constructor() { }
 
   pokemonLotta: {name:string, image:string}[] = [
-    {name: 'Lucario', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/lucario.png'},
-    {name: 'Machamp', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/machamp.png'},
-    {name: 'Conkeldurr', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/conkeldurr.png'},
-    {name: 'Heracross', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/heracross.png'},
-    {name: 'Gallade', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/gallade.png'},
-    {name: 'Hawlucha', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/hawlucha.png'},
-    {name: 'Breloom', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/breloom.png'},
-    {name: 'Toxicroak', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/toxicroak.png'},
-    {name: 'Scrafty', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/scrafty.png'},
-    {name: 'Zangoose', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/zangoose.png'},
-    {name: 'Mienshao', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/mienshao.png'},
-    {name: 'Urshifu', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/urshifu.png'},
-    {name: 'Cobalion', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/cobalion.png'},
-    {name: 'Passimian', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/passimian.png'},
-    {name: 'Buzzwole', image: 'https://img.pokemondb.net/sprites/scarlet-violet/normal/buzzwole.png'},
+    {name: 'Lucario', image: 'https://img.pokemondb.net/sprites/home/normal/lucario.png'},
+    {name: 'Machamp', image: 'https://img.pokemondb.net/sprites/home/normal/machamp.png'},
+    {name: 'Conkeldurr', image: 'https://img.pokemondb.net/sprites/home/normal/conkeldurr.png'},
+    {name: 'Heracross', image: 'https://img.pokemondb.net/sprites/home/normal/heracross.png'},
+    {name: 'Gallade', image: 'https://img.pokemondb.net/sprites/home/normal/gallade.png'},
+    {name: 'Hawlucha', image: 'https://img.pokemondb.net/sprites/home/normal/hawlucha.png'},
+    {name: 'Breloom', image: 'https://img.pokemondb.net/sprites/home/normal/breloom.png'},
+    {name: 'Toxicroak', image: 'https://img.pokemondb.net/sprites/home/normal/toxicroak.png'},
+    {name: 'Scrafty', image: 'https://img.pokemondb.net/sprites/home/normal/scrafty.png'},
+    {name: 'Zangoose', image: 'https://img.pokemondb.net/sprites/home/normal/zangoose.png'},
+    {name: 'Mienshao', image: 'https://img.pokemondb.net/sprites/home/normal/mienshao.png'},
+    {name: 'Urshifu', image: 'https://img.pokemondb.net/sprites/home/normal/urshifu.png'},
+    {name: 'Cobalion', image: 'https://img.pokemondb.net/sprites/home/normal/cobalion.png'},
+    {name: 'Passimian', image: 'https://img.pokemondb.net/sprites/home/normal/passimian.png'},
+    {name: 'Buzzwole', image: 'https://img.pokemondb.net/sprites/home/normal/buzzwole.png'},
   ]
   squadraLotta: {name:string; image:string} = {name: '', image: ''};
 
