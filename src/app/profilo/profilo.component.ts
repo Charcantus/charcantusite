@@ -270,17 +270,51 @@ export class ProfiloComponent implements OnInit {
   ]
   squadraAcciaio: {name:string; image:string} = {name: '', image: ''};
 
+  allenatori: {name:string, image:string}[] = [
+    {name: 'bambino', image:'https://play.pokemonshowdown.com/sprites/trainers/blackbelt-gen1rb.png'},
+    {name: 'bambina', image:'https://play.pokemonshowdown.com/sprites/trainers/beauty-gen1rb.png'},
+    {name: 'gennaro', image: 'https://play.pokemonshowdown.com/sprites/trainers/youngster-gen1rb.png'},
+    {name: 'pino', image: 'https://play.pokemonshowdown.com/sprites/trainers/will-gen2.png'},
+    {name: 'sabrina', image:'https://play.pokemonshowdown.com/sprites/trainers/sabrina-lgpe.png'},
+    {name: 'riccardo', image:'https://play.pokemonshowdown.com/sprites/trainers/rollerskater.png'},
+    {name: 'n', image:'https://play.pokemonshowdown.com/sprites/trainers/n.png'},
+    {name: 'toon n', image:'https://play.pokemonshowdown.com/sprites/trainers/youngn.png'},
+    {name: 'agatha', image:'https://play.pokemonshowdown.com/sprites/trainers/agatha-gen1rb.png'},
+    {name: 'carmine', image:'https://play.pokemonshowdown.com/sprites/trainers/chef.png'},
+    {name: 'ash', image:'https://play.pokemonshowdown.com/sprites/trainers/ash-capbackward.png'},
+    {name: 'pelato', image:'https://play.pokemonshowdown.com/sprites/trainers/blaine-gen1rb.png'},
+    {name: 'gary', image:'https://play.pokemonshowdown.com/sprites/trainers/blue-gen1rb.png'},
+    {name: 'snowboarder', image:'https://play.pokemonshowdown.com/sprites/trainers/boarder-gen2.png'},
+    {name: 'brendan', image:'https://play.pokemonshowdown.com/sprites/trainers/brendan-e.png'},
+    {name: 'bruno', image:'https://play.pokemonshowdown.com/sprites/trainers/bruno-gen1rb.png'},
+    {name: 'pescatrice', image:'https://play.pokemonshowdown.com/sprites/trainers/yellow.png'},
+    {name: 'ladro', image:'https://play.pokemonshowdown.com/sprites/trainers/burglar-gen2.png'},
+    {name: 'pagliaso', image:'https://play.pokemonshowdown.com/sprites/trainers/clown.png'},
+    {name: 'superdottoressa', image:'https://play.pokemonshowdown.com/sprites/trainers/sonia-professor.png'},
+    {name: 'io guido', image:'https://play.pokemonshowdown.com/sprites/trainers/streetthug.png'}
+
+
+  ]
+  allenatoreSelezionato: {name:string; image:string} = {name: '', image: ''};
   nomeAllenatore = ""
   nomeMesso = false
+  alleMesso = false
+  quantimon = 0;
+
 
   ngOnInit(): void {
-    if(localStorage.getItem('allenatore') === null){
+    if(localStorage.getItem('allenatore') === null || localStorage.getItem('allenatore') === ''){
       this.nomeMesso = false
     }else{
       this.nomeMesso = true
       this.nomeAllenatore = localStorage.getItem('allenatore')!;
     }
-
+    if(localStorage.getItem('allename') === null){
+      this.alleMesso = false
+    }else{
+      this.alleMesso = true
+      this.allenatoreSelezionato = this.allenatori.find(a => a.name === localStorage.getItem('allename'))!;
+    }
 
     if(localStorage.getItem('volante') === null){
 
@@ -288,6 +322,7 @@ export class ProfiloComponent implements OnInit {
       let squadraVolanteName = localStorage.getItem('volante')!;
       for(let pokemon of this.pokemonVolante){
         if(pokemon.name === squadraVolanteName){
+          this.quantimon+=1
           this.squadraVolante = pokemon;
         }
       }
@@ -298,6 +333,7 @@ export class ProfiloComponent implements OnInit {
       let squadraVelenoName = localStorage.getItem('veleno')!;
       for(let pokemon of this.pokemonVeleno){
         if(pokemon.name === squadraVelenoName){
+          this.quantimon+=1
           this.squadraVeleno = pokemon;
         }
       }
@@ -308,6 +344,7 @@ export class ProfiloComponent implements OnInit {
       let squadraTerraName = localStorage.getItem('terra')!;
       for(let pokemon of this.pokemonTerra){
         if(pokemon.name === squadraTerraName){
+          this.quantimon+=1
           this.squadraTerra = pokemon;
         }
       }
@@ -318,6 +355,7 @@ export class ProfiloComponent implements OnInit {
       let squadraRocciaName = localStorage.getItem('roccia')!;
       for(let pokemon of this.pokemonRoccia){
         if(pokemon.name === squadraRocciaName){
+          this.quantimon+=1
           this.squadraRoccia = pokemon;
         }
       }
@@ -327,6 +365,7 @@ export class ProfiloComponent implements OnInit {
       let squadraPsicoName = localStorage.getItem('psico')!;
       for(let pokemon of this.pokemonPsico){
         if(pokemon.name === squadraPsicoName){
+          this.quantimon+=1
           this.squadraPsico = pokemon;
         }
       }
@@ -337,6 +376,7 @@ export class ProfiloComponent implements OnInit {
       let squadraLottaName = localStorage.getItem('lotta')!;
       for(let pokemon of this.pokemonLotta){
         if(pokemon.name === squadraLottaName){
+          this.quantimon+=1
           this.squadraLotta = pokemon;
         }
       }
@@ -346,6 +386,7 @@ export class ProfiloComponent implements OnInit {
       let squadraGhiaccioName = localStorage.getItem('ghiaccio')!;
       for(let pokemon of this.pokemonGhiaccio){
         if(pokemon.name === squadraGhiaccioName){
+          this.quantimon+=1
           this.squadraGhiaccio = pokemon;
         }
       }
@@ -355,6 +396,7 @@ export class ProfiloComponent implements OnInit {
       let squadraErbaName = localStorage.getItem('erba')!;
       for(let pokemon of this.pokemonErba){
         if(pokemon.name === squadraErbaName){
+          this.quantimon+=1
           this.squadraErba = pokemon;
         }
       }
@@ -364,6 +406,7 @@ export class ProfiloComponent implements OnInit {
       let squadraFuocoName = localStorage.getItem('fuoco')!;
       for(let pokemon of this.pokemonFuoco){
         if(pokemon.name === squadraFuocoName){
+          this.quantimon+=1
           this.squadraFuoco = pokemon;
         }
       }
@@ -373,6 +416,7 @@ export class ProfiloComponent implements OnInit {
       let squadraElettroName = localStorage.getItem('elettro')!;
       for(let pokemon of this.pokemonElettro){
         if(pokemon.name === squadraElettroName){
+          this.quantimon+=1
           this.squadraElettro = pokemon;
         }
       }
@@ -382,6 +426,7 @@ export class ProfiloComponent implements OnInit {
       let squadraColeotteroName = localStorage.getItem('coleottero')!;
       for(let pokemon of this.pokemonColeottero){
         if(pokemon.name === squadraColeotteroName){
+          this.quantimon+=1
           this.squadraColeottero = pokemon;
         }
       }
@@ -391,6 +436,7 @@ export class ProfiloComponent implements OnInit {
       let squadraBuioName = localStorage.getItem('buio')!;
       for(let pokemon of this.pokemonBuio){
         if(pokemon.name === squadraBuioName){
+          this.quantimon+=1
           this.squadraBuio = pokemon;
         }
       }
@@ -400,6 +446,7 @@ export class ProfiloComponent implements OnInit {
       let squadraAcquaName = localStorage.getItem('acqua')!;
       for(let pokemon of this.pokemonAcqua){
         if(pokemon.name === squadraAcquaName){
+          this.quantimon+=1
           this.squadraAcqua = pokemon;
         }
       }
@@ -409,6 +456,7 @@ export class ProfiloComponent implements OnInit {
       let squadraAcciaioName = localStorage.getItem('acciaio')!;
       for(let pokemon of this.pokemonAcciaio){
         if(pokemon.name === squadraAcciaioName){
+          this.quantimon+=1
           this.squadraAcciaio = pokemon;
         }
       }
@@ -417,9 +465,22 @@ export class ProfiloComponent implements OnInit {
 
   }
 
-
   salvaNome(){
     localStorage.setItem('allenatore', this.nomeAllenatore);
     this.nomeMesso = true;
+  }
+
+  impostaAvatar(name:string, image:string) {
+    this.allenatoreSelezionato = {name, image};
+    localStorage.setItem('allename', name);
+    this.alleMesso = true
+  }
+
+  resetProfilo() {
+    localStorage.removeItem('allenatore');
+    localStorage.removeItem('allename');
+    this.nomeAllenatore = "";
+    this.nomeMesso = false;
+    this.allenatoreSelezionato = {name: '', image: ''};
   }
 }

@@ -20,6 +20,7 @@ import { GhiaccioComponent } from './ghiaccio/ghiaccio.component';
 import { ElettroComponent } from './elettro/elettro.component';
 import { ProfiloComponent } from './profilo/profilo.component';
 import {FormsModule} from "@angular/forms";
+import { ResetComponent } from './reset/reset.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {FormsModule} from "@angular/forms";
     TerraComponent,
     GhiaccioComponent,
     ElettroComponent,
-    ProfiloComponent
+    ProfiloComponent,
+    ResetComponent
   ],
   imports: [
     BrowserModule,

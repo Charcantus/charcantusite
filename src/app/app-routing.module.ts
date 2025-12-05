@@ -16,6 +16,7 @@ import {BuioComponent} from "./buio/buio.component";
 import {AcquaComponent} from "./acqua/acqua.component";
 import {AcciaioComponent} from "./acciaio/acciaio.component";
 import {ProfiloComponent} from "./profilo/profilo.component";
+import {ResetComponent} from "./reset/reset.component";
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'oceano-guerrafondaio', component: AcquaComponent},
   { path: 'raffineria', component: AcciaioComponent},
   { path: 'profilo', component: ProfiloComponent},
+  { path: 'reset', component: ResetComponent},
   { path: '**', component: HomepageComponent }
 
 ];

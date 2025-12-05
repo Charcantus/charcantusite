@@ -1,117 +1,148 @@
-<div *ngIf="!nomeMesso">
+<div *ngIf="!nomeMesso || !alleMesso">
   <div class="row d-flex justify-content-center align-items-center">
     <img src="https://www.spriters-resource.com/media/asset_icons/52/55182.png" alt="Oak"
          class="mx-auto d-block" style="max-width:30%"/>
   </div>
   <div class="row d-flex justify-content-center align-items-center">
-    <h2 class="text-secondary d-flex justify-content-center align-items-center">Benvenuto nel mondo dei Pokémon! Come ti chiami?</h2>
+    <h2 class="text-secondary d-flex justify-content-center align-items-center">Benvenuto nel mondo dei Pokémon! Sei un
+      bambino o una bambina?</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-4 d-flex justify-content-center align-items-center"
+         *ngFor="let all of allenatori">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <img src='{{all.image}}'>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <button class="btn btn-primary mt-2" (click)="impostaAvatar(all.name, all.image)"
+                  [class]="all.name === allenatoreSelezionato.name ? 'btn-primary' : 'btn-success'"
+          >{{ all.name }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center align-items-center">
+    <h2 class="text-secondary d-flex justify-content-center align-items-center">Come ti chiami?</h2>
   </div>
   <div class="d-flex justify-content-center align-items-center">
-  <input type="text" class="form-control mt-3" placeholder="Inserisci il tuo nome"
-         [(ngModel)]="nomeAllenatore"/>
+    <input type="text" class="form-control mt-3" placeholder="Inserisci il tuo nome"
+           [(ngModel)]="nomeAllenatore"/>
   </div>
   <div class="row d-flex justify-content-center align-items-center mt-3">
     <button class="btn btn-primary mt-2" (click)="salvaNome()">Salva Nome</button>
   </div>
 </div>
-<div *ngIf="nomeMesso">
-  <div class="row d-flex justify-content-center align-items-center">
-    <h2 class="d-flex justify-content-center align-items-center">Ciao, {{nomeAllenatore}}!</h2>
-  </div>
-  <div class="row d-flex justify-content-center align-items-center">
-    <h4 class="text-secondary d-flex justify-content-center align-items-center">Ecco i tuoi Pokémon!</h4>
-  </div>
-
+<div *ngIf="nomeMesso&&alleMesso">
   <div class="row">
-
-    <div class="col-md-4" *ngIf="squadraAcciaio.name">
-      <div class="row d-flex justify-content-center align-items-center">
-        <img [src]="squadraAcciaio.image" alt="{{squadraAcciaio.name}}" class="mx-auto d-block"/>
-        <h3 class="d-flex justify-content-center align-items-center">{{squadraAcciaio.name}}</h3>
-      </div>
+    <div class="col-3 d-flex justify-content-center align-items-center">
+      <img src='{{allenatoreSelezionato.image}}' alt="{{allenatoreSelezionato.name}}" class="mx-auto d-block"
+           style="max-width:80px"/>
     </div>
-    <div class="col-md-4" *ngIf="squadraFuoco.name">
-      <div class="row d-flex justify-content-center align-items-center">
-        <img [src]="squadraFuoco.image" alt="{{squadraFuoco.name}}" class="mx-auto d-block"/>
-        <h3 class="d-flex justify-content-center align-items-center">{{squadraFuoco.name}}</h3>
-      </div>
-    </div>
-    <div class="col-md-4" *ngIf="squadraAcqua.name">
-      <div class="row d-flex justify-content-center align-items-center">
-        <img [src]="squadraAcqua.image" alt="{{squadraAcqua.name}}" class="mx-auto d-block"/>
-        <h3 class="d-flex justify-content-center align-items-center">{{squadraAcqua.name}}</h3>
-      </div>
-    </div>
-    <div class="col-md-4" *ngIf="squadraBuio.name">
-      <div class="row d-flex justify-content-center align-items-center">
-        <img [src]="squadraBuio.image" alt="{{squadraBuio.name}}" class="mx-auto d-block"/>
-        <h3 class="d-flex justify-content-center align-items-center">{{squadraBuio.name}}</h3>
-      </div>
-    </div>
-    <div class="col-md-4" *ngIf="squadraColeottero.name">
-      <div class="row d-flex justify-content-center align-items-center">
-        <img [src]="squadraColeottero.image" alt="{{squadraColeottero.name}}" class="mx-auto d-block"/>
-        <h3 class="d-flex justify-content-center align-items-center">{{squadraColeottero.name}}</h3>
-      </div>
-    </div>
-    <div class="col-md-4" *ngIf="squadraElettro.name">
-      <div class="row d-flex justify-content-center align-items-center">
-        <img [src]="squadraElettro.image" alt="{{squadraElettro.name}}" class="mx-auto d-block"/>
-        <h3 class="d-flex justify-content-center align-items-center">{{squadraElettro.name}}</h3>
-      </div>
-    </div>
-    <div class="col-md-4" *ngIf="squadraErba.name">
-      <div class="row d-flex justify-content-center align-items-center">
-        <img [src]="squadraErba.image" alt="{{squadraErba.name}}" class="mx-auto d-block"/>
-        <h3 class="d-flex justify-content-center align-items-center">{{squadraErba.name}}</h3>
-      </div>
-    </div>
-    <div class="col-md-4" *ngIf="squadraGhiaccio.name">
-      <div class="row d-flex justify-content-center align-items-center">
-        <img [src]="squadraGhiaccio.image" alt="{{squadraGhiaccio.name}}" class="mx-auto d-block"/>
-        <h3 class="d-flex justify-content-center align-items-center">{{squadraGhiaccio.name}}</h3>
-      </div>
-    </div>
-    <div class="col-md-4" *ngIf="squadraLotta.name">
-      <div class="row d-flex justify-content-center align-items-center">
-        <img [src]="squadraLotta.image" alt="{{squadraLotta.name}}" class="mx-auto d-block"/>
-        <h3 class="d-flex justify-content-center align-items-center">{{squadraLotta.name}}</h3>
-      </div>
-    </div>
-    <div class="col-md-4" *ngIf="squadraPsico.name">
-      <div class="row d-flex justify-content-center align-items-center">
-        <img [src]="squadraPsico.image" alt="{{squadraPsico.name}}" class="mx-auto d-block"/>
-        <h3 class="d-flex justify-content-center align-items-center">{{squadraPsico.name}}</h3>
-      </div>
-    </div>
-    <div class="col-md-4" *ngIf="squadraRoccia.name">
-      <div class="row d-flex justify-content-center align-items-center">
-        <img [src]="squadraRoccia.image" alt="{{squadraRoccia.name}}" class="mx-auto d-block"/>
-        <h3 class="d-flex justify-content-center align-items-center">{{squadraRoccia.name}}</h3>
-      </div>
-    </div>
-    <div class="col-md-4" *ngIf="squadraTerra.name">
-      <div class="row d-flex justify-content-center align-items-center">
-        <img [src]="squadraTerra.image" alt="{{squadraTerra.name}}" class="mx-auto d-block"/>
-        <h3 class="d-flex justify-content-center align-items-center">{{squadraTerra.name}}</h3>
-      </div>
-    </div>
-    <div class="col-md-4" *ngIf="squadraVeleno.name">
-      <div class="row d-flex justify-content-center align-items-center">
-        <img [src]="squadraVeleno.image" alt="{{squadraVeleno.name}}" class="mx-auto d-block"/>
-        <h3 class="d-flex justify-content-center align-items-center">{{squadraVeleno.name}}</h3>
-      </div>
-    </div>
-    <div class="col-md-4" *ngIf="squadraVolante.name">
-      <div class="row d-flex justify-content-center align-items-center">
-        <img [src]="squadraVolante.image" alt="{{squadraVolante.name}}" class="mx-auto d-block"/>
-        <h3 class="d-flex justify-content-center align-items-center">{{squadraVolante.name}}</h3>
-      </div>
+    <div class="col-9">
+      <h2>{{ nomeAllenatore }}</h2>
     </div>
 
-
-
+    <div class="col-3 d-flex justify-content-center align-items-center">
+      <button class="btn btn-secondary mt-2" (click)="resetProfilo()">Cambia Profilo</button>
+    </div>
+    <div class="col-9">
+      <h4 class="text-secondary">Squadra: {{ quantimon }}/14</h4>
+    </div>
   </div>
+
+<div class="row">
+
+  <div class="col-md-4" *ngIf="squadraAcciaio.name">
+    <div class="row d-flex justify-content-center align-items-center">
+      <img [src]="squadraAcciaio.image" alt="{{squadraAcciaio.name}}" class="mx-auto d-block"/>
+      <h3 class="d-flex justify-content-center align-items-center">{{ squadraAcciaio.name }}</h3>
+    </div>
+  </div>
+  <div class="col-md-4" *ngIf="squadraFuoco.name">
+    <div class="row d-flex justify-content-center align-items-center">
+      <img [src]="squadraFuoco.image" alt="{{squadraFuoco.name}}" class="mx-auto d-block"/>
+      <h3 class="d-flex justify-content-center align-items-center">{{ squadraFuoco.name }}</h3>
+    </div>
+  </div>
+  <div class="col-md-4" *ngIf="squadraAcqua.name">
+    <div class="row d-flex justify-content-center align-items-center">
+      <img [src]="squadraAcqua.image" alt="{{squadraAcqua.name}}" class="mx-auto d-block"/>
+      <h3 class="d-flex justify-content-center align-items-center">{{ squadraAcqua.name }}</h3>
+    </div>
+  </div>
+  <div class="col-md-4" *ngIf="squadraBuio.name">
+    <div class="row d-flex justify-content-center align-items-center">
+      <img [src]="squadraBuio.image" alt="{{squadraBuio.name}}" class="mx-auto d-block"/>
+      <h3 class="d-flex justify-content-center align-items-center">{{ squadraBuio.name }}</h3>
+    </div>
+  </div>
+  <div class="col-md-4" *ngIf="squadraColeottero.name">
+    <div class="row d-flex justify-content-center align-items-center">
+      <img [src]="squadraColeottero.image" alt="{{squadraColeottero.name}}" class="mx-auto d-block"/>
+      <h3 class="d-flex justify-content-center align-items-center">{{ squadraColeottero.name }}</h3>
+    </div>
+  </div>
+  <div class="col-md-4" *ngIf="squadraElettro.name">
+    <div class="row d-flex justify-content-center align-items-center">
+      <img [src]="squadraElettro.image" alt="{{squadraElettro.name}}" class="mx-auto d-block"/>
+      <h3 class="d-flex justify-content-center align-items-center">{{ squadraElettro.name }}</h3>
+    </div>
+  </div>
+  <div class="col-md-4" *ngIf="squadraErba.name">
+    <div class="row d-flex justify-content-center align-items-center">
+      <img [src]="squadraErba.image" alt="{{squadraErba.name}}" class="mx-auto d-block"/>
+      <h3 class="d-flex justify-content-center align-items-center">{{ squadraErba.name }}</h3>
+    </div>
+  </div>
+  <div class="col-md-4" *ngIf="squadraGhiaccio.name">
+    <div class="row d-flex justify-content-center align-items-center">
+      <img [src]="squadraGhiaccio.image" alt="{{squadraGhiaccio.name}}" class="mx-auto d-block"/>
+      <h3 class="d-flex justify-content-center align-items-center">{{ squadraGhiaccio.name }}</h3>
+    </div>
+  </div>
+  <div class="col-md-4" *ngIf="squadraLotta.name">
+    <div class="row d-flex justify-content-center align-items-center">
+      <img [src]="squadraLotta.image" alt="{{squadraLotta.name}}" class="mx-auto d-block"/>
+      <h3 class="d-flex justify-content-center align-items-center">{{ squadraLotta.name }}</h3>
+    </div>
+  </div>
+  <div class="col-md-4" *ngIf="squadraPsico.name">
+    <div class="row d-flex justify-content-center align-items-center">
+      <img [src]="squadraPsico.image" alt="{{squadraPsico.name}}" class="mx-auto d-block"/>
+      <h3 class="d-flex justify-content-center align-items-center">{{ squadraPsico.name }}</h3>
+    </div>
+  </div>
+  <div class="col-md-4" *ngIf="squadraRoccia.name">
+    <div class="row d-flex justify-content-center align-items-center">
+      <img [src]="squadraRoccia.image" alt="{{squadraRoccia.name}}" class="mx-auto d-block"/>
+      <h3 class="d-flex justify-content-center align-items-center">{{ squadraRoccia.name }}</h3>
+    </div>
+  </div>
+  <div class="col-md-4" *ngIf="squadraTerra.name">
+    <div class="row d-flex justify-content-center align-items-center">
+      <img [src]="squadraTerra.image" alt="{{squadraTerra.name}}" class="mx-auto d-block"/>
+      <h3 class="d-flex justify-content-center align-items-center">{{ squadraTerra.name }}</h3>
+    </div>
+  </div>
+  <div class="col-md-4" *ngIf="squadraVeleno.name">
+    <div class="row d-flex justify-content-center align-items-center">
+      <img [src]="squadraVeleno.image" alt="{{squadraVeleno.name}}" class="mx-auto d-block"/>
+      <h3 class="d-flex justify-content-center align-items-center">{{ squadraVeleno.name }}</h3>
+    </div>
+  </div>
+  <div class="col-md-4" *ngIf="squadraVolante.name">
+    <div class="row d-flex justify-content-center align-items-center">
+      <img [src]="squadraVolante.image" alt="{{squadraVolante.name}}" class="mx-auto d-block"/>
+      <h3 class="d-flex justify-content-center align-items-center">{{ squadraVolante.name }}</h3>
+    </div>
+  </div>
+
+
+</div>
 
 
 </div>
